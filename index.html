@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tokki Bean Cafe - Coffee Builder</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/bootstrap-css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="main">
+      <section class="home">  
+        <!-- Hero Section -->
+        <div class="hero-section">
+          <div class="hero-backdrop">
+            <div class="coffee-circle circle-1"></div>
+            <div class="coffee-circle circle-2"></div>
+            <div class="coffee-circle circle-3"></div>
+            <div class="coffee-beans-pattern"></div>
+          </div>
+          <div class="hero-content">
+            <div class="hero-text">
+              <h5 class="hero-tagline">Handcrafted with Love</h5>
+              <h1 class="hero-title">Tokki Bean <span>Cafe</span></h1>
+              <p class="hero-description">Experience the perfect blend of artisanal coffee and cozy atmosphere in every cup.</p>
+              <div class="hero-buttons">
+                <a href="#coffee-builder" class="primary-btn">Build Your Coffee</a>
+                <a href="#visit" class="secondary-btn">Visit Us</a>
+              </div>
+            </div>
+            <div class="hero-decorations">
+              <div class="steam-effect">
+                <div class="steam steam-1"></div>
+                <div class="steam steam-2"></div>
+                <div class="steam steam-3"></div>
+                <div class="steam steam-4"></div>
+              </div>
+              <div class="coffee-cup-icon">
+                <i class="fa-solid fa-mug-hot"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coffee-builder" id="coffee-builder">
+          <div class="builder-heading">
+            <h1>Build Your <span>Perfect Coffee</span></h1>
+            <p>Customize your drink exactly how you like it</p>
+          </div>
+          
+          <div class="builder-container">
+            <div class="coffee-options">
+              <div class="option-section" id="base-section">
+                <h2>Choose your base</h2>
+                <div class="options-grid">
+                  <div class="option" data-type="base" data-value="espresso">
+                    <div class="option-icon">
+                      <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    <div class="option-name">Espresso</div>
+                  </div>
+                  <div class="option" data-type="base" data-value="americano">
+                    <div class="option-icon">
+                      <i class="fa-solid fa-mug-saucer"></i>
+                    </div>
+                    <div class="option-name">Americano</div>
+                  </div>
+                  <div class="option" data-type="base" data-value="latte">
+                    <div class="option-icon">
+                      <i class="fa-solid fa-glass-water"></i>
+                    </div>
+                    <div class="option-name">Latte</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="option-section" id="milk-section">
+                <h2>Select milk</h2>
+                <div class="options-grid">
+                  <div class="option" data-type="milk" data-value="none">
+                    <div class="option-icon">
+                      <i class="fa-solid fa-ban"></i>
+                    </div>
+                    <div class="option-name">No Milk</div>
+                  </div>
+                  <div class="option" data-type="milk" data-value="whole">
+                    <div class="option-icon">
+                      <i class="fa-solid fa-bottle-water"></i>
+                    </div>
+                    <div class="option-name">Whole Milk</div>
+                  </div>
+                  <div class="option" data-type="milk" data-value="oat">
+                    <div class="option-icon">
+                      <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <div class="option-name">Oat Milk</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="coffee-preview">
+              <div class="preview-cup">
+                <!-- Enhanced 3D Cup -->
+                <div class="cup-wrapper">
+                  <div class="cup-shadow"></div>
+                  <div class="cup">
+                    <div class="cup-body">
+                      <div class="cup-shine"></div>
+                      <div class="cup-liquid"></div>
+                      <div class="cup-foam"></div>
+                    </div>
+                    <div class="cup-handle"></div>
+                    <div class="cup-saucer"></div>
+                  </div>
+                  <div class="steam-container">
+                    <!-- Steam particles will be added by JS -->
+                  </div>
+                </div>
+              </div>
+              <div class="coffee-info">
+                <h3>Your Coffee</h3>
+                <div class="coffee-name">Select options to start</div>
+                <button class="order-btn">Add to Order</button>
+              </div>
+              
+              <!-- Toast notification will appear here -->
+              <div class="notification-toast" id="notification-toast"></div>
+            </div>
+          </div>
+        </div>
+      </section>  
+      
+      <!-- Gallery Section - Full Width Storytelling -->
+      <section class="gallery-storytelling" id="gallery">
+        <div class="container-fluid p-0">
+          <!-- Gallery Heading -->
+          <div class="row m-0">
+            <div class="col-12 text-center gallery-heading">
+              <h2>Our <span>Coffee Journey</span></h2>
+              <p class="lead">From bean to cup - a story of passion and craftsmanship</p>
+            </div>
+          </div>
+          
+          <!-- Story Section 1 -->
+          <div class="row story-row align-items-center m-0">
+            <div class="col-lg-6 p-0 story-image">
+              <img src="./assets/img/coffee-1.jpg" alt="Coffee beans" class="img-fluid w-100 h-100 object-cover">
+            </div>
+            <div class="col-lg-6 story-content">
+              <div class="story-text">
+                <h3>The Perfect <span>Bean</span></h3>
+                <p>Our journey begins with selecting only the finest coffee beans from sustainable farms around the world. Each bean is carefully inspected to ensure it meets our exacting standards.</p>
+                <p>We believe that exceptional coffee starts at the source, which is why we've built direct relationships with farmers who share our passion for quality and sustainability.</p>
+                <div class="story-highlight">
+                  <i class="fas fa-leaf"></i>
+                  <span>100% Sustainably Sourced</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Story Section 2 -->
+          <div class="row story-row align-items-center m-0 story-reverse">
+            <div class="col-lg-6 story-content">
+              <div class="story-text">
+                <h3>The Artful <span>Roast</span></h3>
+                <p>Our master roasters bring decades of experience to transform these exceptional beans into the perfect roast. Each small batch is carefully monitored to develop complex flavors and aromas.</p>
+                <p>The roasting process is both a science and an art - requiring precise timing, temperature control, and an experienced palate to achieve perfection.</p>
+                <div class="story-highlight">
+                  <i class="fas fa-fire"></i>
+                  <span>Small Batch Perfection</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 p-0 story-image">
+              <img src="./assets/img/coffee-2.jpg" alt="Coffee roasting" class="img-fluid w-100 h-100 object-cover">
+            </div>
+          </div>
+          
+          <!-- Story Section 3 -->
+          <div class="row story-row align-items-center m-0">
+            <div class="col-lg-6 p-0 story-image">
+              <img src="./assets/img/coffee-3.jpg" alt="Coffee brewing" class="img-fluid w-100 h-100 object-cover">
+            </div>
+            <div class="col-lg-6 story-content">
+              <div class="story-text">
+                <h3>The Perfect <span>Pour</span></h3>
+                <p>The final step in our journey is the brewing process. Our baristas are trained in the art of extraction, ensuring that every cup highlights the unique characteristics of our coffee.</p>
+                <p>Whether you prefer espresso, pour-over, or cold brew, we've perfected our techniques to bring out the best in every bean.</p>
+                <div class="story-highlight">
+                  <i class="fas fa-mug-hot"></i>
+                  <span>Crafted With Precision</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Visit Our Cafe Section -->
+      <section class="visit-section" id="visit">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2 class="visit-heading">Visit Our <span>Cafe</span></h2>
+              <p class="visit-subtitle">Come experience the perfect cup in our cozy space</p>
+            </div>
+          </div>
+          
+          <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+              <div class="cafe-image-container">
+                <img src="./assets/img/coffee-2.jpg" alt="Tokki Bean Cafe" class="img-fluid rounded">
+                <div class="cafe-tag">
+                  <span>NOW OPEN</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="cafe-details">
+                <div class="cafe-info-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div>
+                    <h4>Find Us</h4>
+                    <p>123 Coffee Street, Bean District<br>Brewville, BC 10101</p>
+                  </div>
+                </div>
+                
+                <div class="cafe-info-item">
+                  <i class="fas fa-clock"></i>
+                  <div>
+                    <h4>Hours</h4>
+                    <p>Monday - Friday: 7AM - 8PM<br>
+                       Saturday: 8AM - 9PM<br>
+                       Sunday: 8AM - 6PM</p>
+                  </div>
+                </div>
+                
+                <div class="cafe-info-item">
+                  <i class="fas fa-phone-alt"></i>
+                  <div>
+                    <h4>Contact</h4>
+                    <p>(555) 123-4567<br>hello@tokkibeancafe.com</p>
+                  </div>
+                </div>
+                
+                <a href="#" class="btn-visit">Book a Table</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Logo & About -->
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="footer-brand">
+              <h3>Tokki Bean <span>Cafe</span></h3>
+            </div>
+            <p class="footer-about">Serving exceptional coffee in a warm, inviting atmosphere. Our passion for quality extends from bean to cup, creating memorable experiences with every sip.</p>
+            <div class="footer-social">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-yelp"></i></a>
+            </div>
+          </div>
+          
+          <!-- Quick Links -->
+          <div class="col-md-4 col-lg-2 mb-4 mb-md-0">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#coffee-builder">Coffee Builder</a></li>
+              <li><a href="#gallery">Our Story</a></li>
+              <li><a href="#visit">Visit Us</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          
+          <!-- Contact Info -->
+          <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
+            <h4 class="footer-heading">Contact</h4>
+            <ul class="footer-contact">
+              <li><i class="fas fa-map-marker-alt"></i> 123 Coffee Street, Bean District</li>
+              <li><i class="fas fa-phone-alt"></i> (555) 123-4567</li>
+              <li><i class="fas fa-envelope"></i> hello@tokkibeancafe.com</li>
+              <li><i class="fas fa-clock"></i> Mon-Fri: 7AM-8PM</li>
+            </ul>
+          </div>
+          
+          <!-- Newsletter -->
+          <div class="col-md-4 col-lg-3">
+            <h4 class="footer-heading">Stay Updated</h4>
+            <p class="footer-newsletter-text">Subscribe to our newsletter for special offers and updates</p>
+            <form class="footer-newsletter">
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="Your email" required>
+                <button class="btn btn-subscribe" type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+              <p class="mb-0">© 2023 Tokki Bean Cafe. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <p class="mb-0">Made with <i class="fas fa-heart"></i> and lots of coffee</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="./assets/bootstrap-js/bootstrap.min.js"></script>
+    <script src="./assets/ScrollTrigger.min.js"></script>
+    <script src="./assets/gsap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
